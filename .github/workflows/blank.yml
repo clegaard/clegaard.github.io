@@ -29,7 +29,7 @@ jobs:
         id: pages
         uses: actions/configure-pages@v2
       - name: Install zola
-      - run: curl -L https://github.com/getzola/zola/releases/download/v0.16.1/zola-v0.16.1-x86_64-unknown-linux-gnu.tar.gz | tar -xzv
+        run: curl -L https://github.com/getzola/zola/releases/download/v0.16.1/zola-v0.16.1-x86_64-unknown-linux-gnu.tar.gz | tar -xzv
       - name: Build with zola
         run: ./zola build --base-url "${{ steps.pages.outputs.base_path }}" --output-dir --output-dir ./_site
       - name: Upload artifact
