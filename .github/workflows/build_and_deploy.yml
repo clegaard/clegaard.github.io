@@ -1,5 +1,5 @@
 # adapted from https://github.com/actions/upload-pages-artifact/issues/6
-name: Deploy Zola documentation
+name: Build and deploy Zola documentation
 
 on:
   push:
