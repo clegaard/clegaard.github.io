@@ -35,7 +35,7 @@ jobs:
       - name: Build with zola
         run: ./zola build --base-url "${{ steps.pages.outputs.base_path }}" --output-dir ./_site
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v1
 
   # Deployment job
   deploy:
