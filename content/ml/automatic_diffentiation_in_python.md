@@ -1,9 +1,8 @@
 +++
 title = "Automatic Differentiation in Python"
 date = 2022-10-04
-
-[extra]
-katex = true
+tags = ["Python", "ML", "Jax", "PyTorch"]
+draft = true
 +++
 
 *Automatic Differentiation* (AD) refers to a set of techniques for differentiating computer programs with respect to their inputs.

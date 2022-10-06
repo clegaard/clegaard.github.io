@@ -1,6 +1,7 @@
 +++
 title = "Serving Zola documentation on GitHub pages"
 date = 2022-10-05
+draft = true
 +++
 
 GitHub pages provides free hosting of static pages which is useful for building documentation and blogs like what you a currently reading.
@@ -110,13 +111,29 @@ Pushing the file to the repo should trigger the workflow
 
 ![GitHub Action](../github_action_trigger.png)
 
-After the action has finished you can access the content on `${username}.github.io`. For now the content wi
+After the action has finished you can access the content on `${username}.github.io`.
+For now it should look exactly as if it was served to localhost.
+
+![Zola remote](../zola_remote.png)
 
 # Installing a theme
 
-https://www.getzola.org/themes/
+Themes are a mechanism used by Zola to define how each markdown file is rendered, as well as defining commonly used functionality like navigation and search bars.
 
-# Adding a to README.md
+We will use the tucan theme which can be found [here](https://www.getzola.org/themes/).
+Themes are distributed as git repos, that contains the template files and their repos typically provide detailed instructions on how to use them.
+
+To install the toucan theme initialize it as a submodule inside the themes folder:
+``` bash
+git submodule add --name toucan https://git.42l.fr/HugoTrentesaux/toucan.git themes/toucan
+```
+
+# Adding content 
+
+Content is added in the form of markdown files stored in inside the `content` folder.
+Add a file 
+
+# Adding a to README.md (OPTIONAL)
 https://stackoverflow.com/questions/48919200/github-pages-only-showing-readme-file
 
 
