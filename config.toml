@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://example.com"
+base_url = "https://christianlegaard.com"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -22,9 +22,9 @@ highlight_code = true
 katex.enabled = true
 katex.auto_render = true
 
-chart.enabled = true
-mermaid.enabled = true
-galleria.enabled = true
+# chart.enabled = true
+# mermaid.enabled = true
+# galleria.enabled = true
 
 navbar_items = [
  { code = "en", nav_items = [
@@ -62,7 +62,7 @@ facebook = "Christian.m.Legaard"
 github = "clegaard"
 # gitlab = "<gitlab_username>"
 # keybase = "<keybase_username>"
-linkedin = "<linkedin_username>"
+# linkedin = "<linkedin_username>"
 # stackoverflow = "<stackoverflow_userid>"
 # twitter = "<twitter_username>"
 instagram = "le.christ94"
@@ -74,14 +74,14 @@ discord = "ChristianLegaard#4775"
 
 
 # To add google analytics
-[extra.analytics]
-google = "<your_gtag>"
+# [extra.analytics]
+# google = "<your_gtag>"
 
 # To add disqus comments
-[extra.commenting]
-disqus = "<your_disqus_shortname>"
+# [extra.commenting]
+# disqus = "<your_disqus_shortname>"
 
 # To enable mapbox maps
-[extra.mapbox]
-enabled = true
-access_token = "<your_access_token>"
+# [extra.mapbox]
+# enabled = true
+# access_token = "<your_access_token>"
