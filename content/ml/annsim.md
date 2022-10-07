@@ -13,10 +13,10 @@ Specifically the notebooks cover:
 * How to define ordinary differential equations in Python, how to implement a solver in Jax, how to tune the parameters of an ODE using gradient descent, and how to implement and train a neural ODEs model in pure Jax.
 
 The notebooks can be opened in Google Colaboratory through the links:
-* [1_intro_to_jax](https://githubtocolab.com/clegaard/clegaard.github.io/content/ml/notebooks/1_intro_to_jax.ipynb)
-* [1a_exercise.ipynb](https://githubtocolab.com/clegaard/clegaard.github.io/content/ml/notebooks/1a_exercise.ipynb)
-* [1a_exercise_solution.ipynb](https://githubtocolab.com/clegaard/clegaard.github.io/content/ml/notebooks/1a_exercise_solution.ipynb)
-* [2_lotka_volterra.ipynb](https://githubtocolab.com/clegaard/clegaard.github.io/content/ml/notebooks/2_lotka_volterra.ipynb)
+* [1_intro_to_jax](https://githubtocolab.com/clegaard/clegaard.github.io/blob/main/content/ml/notebooks/1_intro_to_jax.ipynb)
+* [1a_exercise.ipynb](https://githubtocolab.com/clegaard/clegaard.github.io/blob/main/content/ml/notebooks/1a_exercise.ipynb)
+* [1a_exercise_solution.ipynb](https://githubtocolab.com/clegaard/clegaard.github.io/blob/main/content/ml/notebooks/1a_exercise_solution.ipynb)
+* [2_lotka_volterra.ipynb](https://githubtocolab.com/clegaard/clegaard.github.io/blob/main/content/ml/notebooks/2_lotka_volterra.ipynb)
 
 ![prediction](../notebooks/prediction.svg)
 ![loss](../notebooks/loss.svg)
