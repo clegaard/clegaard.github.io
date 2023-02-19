@@ -3,7 +3,7 @@ title="Publications"
 +++
 
 For a list of my publications, see my [Google Scholar account](https://scholar.google.com/citations?user=NwJFl9cAAAAJ&hl=en).
-Below is a list of publications sorted by year of publication, unlike the link above these are updated manually.
+Below is a list of publications sorted by year of publication.
 
 # 2023
 
@@ -15,8 +15,8 @@ Dynamical systems see widespread use in natural sciences like physics, biology, 
 [Code](https://github.com/clegaard/deep_learning_for_dynamical_systems)
 
 <figure>
-    <img src="./publications/survey_structure.svg" alt="Survey structure" width=49%>
-    <img src="./publications/ts.svg" alt="Time-stepper Model" width=49%>
+    <img src={{get_url(path='publications/survey_structure.svg')}} alt="Survey structure" width=49%>
+    <img src={{get_url(path='publications/ts.svg')}} alt="Time-stepper Model" width=49%>
 </figure>
 
 # 2021
@@ -30,35 +30,46 @@ Producing independent simulation units that can be used in a Functional Mock-Up 
 
 
 ## Coupling physical and machine learning models: case study of a single-family house
-Future intelligent and integrated energy systems must have a high degree of flexibility and efficiency to ensure reliable and sustainable operation. Along with the rapid expansion of renewable energy, this degree of flexibility and efficiency can be achieved by overcoming the clear separation between different sectors and by increasing connectivity and the associated data availability through the integration of sensors and edge/fog computing. All of these developments drive the transition from towards so-called Cyber-Physical Energy Systems . The Cyber technologies (sensors, edge/fog computing, IoT networks, etc.) are able to monitor the physical systems, to enable communication between different subsystems and to control them. The emergence of Cyber-Physical Systems poses new challenges for traditional modelling and simulation approaches. 
+Future intelligent and integrated energy systems must have a high degree of flexibility and efficiency to ensure reliable and sustainable operation. Along with the rapid expansion of renewable energy, this degree of flexibility and efficiency can be achieved by overcoming the clear separation between different sectors and by increasing connectivity and the associated data availability through the integration of sensors and edge/fog computing. All of these developments drive the transition from towards so-called Cyber-Physical Energy Systems. The Cyber technologies (sensors, edge/fog computing, IoT networks, etc.) are able to monitor the physical systems, to enable communication between different subsystems and to control them. The emergence of Cyber-Physical Systems poses new challenges for traditional modelling and simulation approaches.
+
 
 [Paper](https://doi.org/10.3384/ecp21181335) |
 [Code](https://github.com/tug-cps/NextHyb2)
 
 
 <figure>
-    <img src="./publications/house_model.png" width=49%>
-    <img src="./publications/house_prediction.png" width=49%>
+    <img src={{get_url(path='publications/house_model.png')}} alt="schematic of house" width=49%>
+    <img src={{get_url(path='publications/house_prediction.png')}} alt="time series prediction" width=49%>
 <figure>
 
-
 ## Energy Prediction under Changed Demand Conditions: Robust Machine Learning Models and Input Feature Combinations
-Deciding on a suitable algorithm for energy demand prediction in a building is non-trivial and depends on the availability of data. In this paper we compare four machine learning models, commonly found in the literature, in terms of their generalization performance and in terms of how using different sets of input features affects accuracy. This is tested on a data set where consumption patterns differ significantly between training and evaluation because of the Covid-19 pandemic. We provide a hands-on guide and supply a Python framework for building operators to adapt and use in their applications.
+Deciding on a suitable algorithm for energy demand prediction in a building is non-trivial and depends on the availability of data. 
+In this paper we compare four machine learning models, commonly found in the literature, in terms of their generalization performance and in terms of how using different sets of input features affects accuracy. 
+This is tested on a data set where consumption patterns differ significantly between training and evaluation because of the Covid-19 pandemic. 
+We provide a hands-on guide and supply a Python framework for building operators to adapt and use in their applications.
 
 [Paper](https://doi.org/10.26868/25222708.2021.30806)
 
 <figure>
-    <img src="./publications/features_vs_accuracy.png" width=60%>
+    <img src={{get_url(path='publications/features_vs_accuracy.png')}} alt="number of features and accuracy of model" width=70%>
 <figure>
 
 # 2020
 
 ## Rapid Prototyping of Self-Adaptive-Systems Using Python Functional Mockup Units
-During the development of Cyber-Physical Systems (CPSs), it is crucial to enable efficient collaboration between different disciplines. Co-simulation plays a key role in this by allowing the system as a whole to be simulated by composing simulations of its parts. The ability to do this coupling relies on the models adhering to a well-defined interface. The Functional Mockup Interface (FMI) defines this interface and the models that implemented it are called Functional Mockup Units (FMUs). While a wealth of specialized simulation tools can generate FMUs, they are often commercial and do not support of complex software prototypes. Rather than implement these as FMUs from scratch (FMI requires expertise in C), losing valuable time, the contribution presented in this paper is a tool that allows FMUs to be implemented rapidly in Python. The advantages of this approach are demonstrated in an industrial use case, where a tracking simulator is implemented as an FMU.
+During the development of Cyber-Physical Systems (CPSs), it is crucial to enable efficient collaboration between different disciplines.
+Co-simulation plays a key role in this by allowing the system as a whole to be simulated by composing simulations of its parts.
+The ability to do this coupling relies on the models adhering to a well-defined interface.
+The Functional Mockup Interface (FMI) defines this interface and the models that implemented it are called Functional Mockup Units (FMUs).
+While a wealth of specialized simulation tools can generate FMUs, they are often commercial and do not support of complex software prototypes.
+Rather than implement these as FMUs from scratch (FMI requires expertise in C), losing valuable time, the contribution presented in this paper is a tool that allows FMUs to be implemented rapidly in Python.
+The advantages of this approach are demonstrated in an industrial use case, where a tracking simulator is implemented as an FMU.
 
-[Paper](https://dl.acm.org/doi/abs/10.5555/3427510.3427532) | [Tool](https://github.com/INTO-CPS-Association/pyfmu) | [Models](https://github.com/INTO-CPS-Association/pyfmu/releases/tag/0.0.4)
+[Paper](https://dl.acm.org/doi/abs/10.5555/3427510.3427532) | 
+[Tool](https://github.com/INTO-CPS-Association/pyfmu) | 
+[Models](https://github.com/INTO-CPS-Association/pyfmu/releases/tag/0.0.4)
 
 <figure>
-    <img src="./publications/robotti.png" alt="Agricultural robot" width=60%>
-    <img src="./publications/tracking_simulator.png" alt="Tracking simulator" width=60%>
+    <img src={{get_url(path='publications/robotti.png')}} alt="Agricultural robot" width=70%>
+    <img src={{get_url(path='publications/tracking_simulator.png')}} alt="Tracking simulator" width=70%>
 </figure>
