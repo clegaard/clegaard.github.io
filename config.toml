@@ -33,6 +33,7 @@ navbar_items = [
   { url = "$BASE_URL/compilation", name = "Compilation" },
   { url = "$BASE_URL/ci", name = "Continuous Integration" },
   { url = "$BASE_URL/fmi", name = "Functional Mock-up Interface" },
+  { url = "$BASE_URL/publications", name = "Publications" },
 
 
 
