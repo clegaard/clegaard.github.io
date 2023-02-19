@@ -30,9 +30,9 @@ navbar_items = [
  { code = "en", nav_items = [
   { url = "$BASE_URL/", name = "Home" },
   { url = "$BASE_URL/ml", name = "Machine Learning" },
-  { url = "$BASE_URL/compilation", name = "Compilation" },
-  { url = "$BASE_URL/ci", name = "Continuous Integration" },
-  { url = "$BASE_URL/fmi", name = "Functional Mock-up Interface" },
+  # { url = "$BASE_URL/compilation", name = "Compilation" },
+  # { url = "$BASE_URL/ci", name = "Continuous Integration" },
+  # { url = "$BASE_URL/fmi", name = "Functional Mock-up Interface" },
   { url = "$BASE_URL/publications", name = "Publications" },
 
 

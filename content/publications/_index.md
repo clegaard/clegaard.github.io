@@ -11,13 +11,13 @@ Below is a list of publications sorted by year of publication, unlike the link a
 
 Dynamical systems see widespread use in natural sciences like physics, biology, and chemistry, as well as engineering disciplines such as circuit analysis, computational fluid dynamics, and control. For simple systems, the differential equations governing the dynamics can be derived by applying fundamental physical laws. However, for more complex systems, this approach becomes exceedingly difficult. Data-driven modeling is an alternative paradigm that seeks to learn an approximation of the dynamics of a system using observations of the true system. In recent years, there has been an increased interest in applying data-driven modeling techniques to solve a wide range of problems in physics and engineering. This article provides a survey of the different ways to construct models of dynamical systems using neural networks. In addition to the basic overview, we review the related literature and outline the most significant challenges from numerical simulations that this modeling paradigm must overcome. Based on the reviewed literature and identified challenges, we provide a discussion on promising research areas.
 
-<figure>
-    <img src="publications/survey_structure.svg" alt="Survey structure" width=49%>
-    <img src="publications/ts.svg" alt="Time-stepper Model" width=49%>
-</figure>
-
 [Paper](https://doi.org/10.1145/3567591) |
 [Code](https://github.com/clegaard/deep_learning_for_dynamical_systems)
+
+<figure>
+    <img src="./publications/survey_structure.svg" alt="Survey structure" width=49%>
+    <img src="./publications/ts.svg" alt="Time-stepper Model" width=49%>
+</figure>
 
 # 2021
 
@@ -35,16 +35,30 @@ Future intelligent and integrated energy systems must have a high degree of flex
 [Paper](https://doi.org/10.3384/ecp21181335) |
 [Code](https://github.com/tug-cps/NextHyb2)
 
+
+<figure>
+    <img src="./publications/house_model.png" width=49%>
+    <img src="./publications/house_prediction.png" width=49%>
+<figure>
+
+
 ## Energy Prediction under Changed Demand Conditions: Robust Machine Learning Models and Input Feature Combinations
 Deciding on a suitable algorithm for energy demand prediction in a building is non-trivial and depends on the availability of data. In this paper we compare four machine learning models, commonly found in the literature, in terms of their generalization performance and in terms of how using different sets of input features affects accuracy. This is tested on a data set where consumption patterns differ significantly between training and evaluation because of the Covid-19 pandemic. We provide a hands-on guide and supply a Python framework for building operators to adapt and use in their applications.
 
 [Paper](https://doi.org/10.26868/25222708.2021.30806)
 
-## 2020
+<figure>
+    <img src="./publications/features_vs_accuracy.png" width=60%>
+<figure>
 
+# 2020
+
+## Rapid Prototyping of Self-Adaptive-Systems Using Python Functional Mockup Units
 During the development of Cyber-Physical Systems (CPSs), it is crucial to enable efficient collaboration between different disciplines. Co-simulation plays a key role in this by allowing the system as a whole to be simulated by composing simulations of its parts. The ability to do this coupling relies on the models adhering to a well-defined interface. The Functional Mockup Interface (FMI) defines this interface and the models that implemented it are called Functional Mockup Units (FMUs). While a wealth of specialized simulation tools can generate FMUs, they are often commercial and do not support of complex software prototypes. Rather than implement these as FMUs from scratch (FMI requires expertise in C), losing valuable time, the contribution presented in this paper is a tool that allows FMUs to be implemented rapidly in Python. The advantages of this approach are demonstrated in an industrial use case, where a tracking simulator is implemented as an FMU.
 
-[Paper](https://doi.org/10.5555/3427510.3427532) |
-[Code](https://github.com/INTO-CPS-Association/pyfmu)
+[Paper](https://dl.acm.org/doi/abs/10.5555/3427510.3427532) | [Tool](https://github.com/INTO-CPS-Association/pyfmu) | [Models](https://github.com/INTO-CPS-Association/pyfmu/releases/tag/0.0.4)
 
-
+<figure>
+    <img src="./publications/robotti.png" alt="Agricultural robot" width=60%>
+    <img src="./publications/tracking_simulator.png" alt="Tracking simulator" width=60%>
+</figure>
