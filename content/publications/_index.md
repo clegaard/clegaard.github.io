@@ -14,11 +14,12 @@ Dynamical systems see widespread use in natural sciences like physics, biology, 
 [Paper](https://doi.org/10.1145/3567591) |
 [Code](https://github.com/clegaard/deep_learning_for_dynamical_systems)
 
-<figure>
-    <img src={{get_url(path='publications/survey_structure.svg')}} alt="Survey structure" width=49%>
-    <img src={{get_url(path='publications/ts.svg')}} alt="Time-stepper Model" width=49%>
-</figure>
-
+![](survey_structure.svg)
+![](ts.svg)
+<!-- <figure>
+    <img src={{get_url(path='publications/survey_structure.svg')}} alt="Survey structure" width=60%>
+    <img src={{get_url(path='publications/ts.svg')}} alt="Time-stepper Model" width=60%>
+</figure> -->
 # 2021
 
 ## A Universal Mechanism for Implementing Functional Mock-up Units
@@ -27,6 +28,35 @@ Producing independent simulation units that can be used in a Functional Mock-Up 
 
 [Paper](https://doi.org/10.5220/0010577601210129) |
 [Code](https://github.com/INTO-CPS-Association/unifmu)
+
+![](unifmu_rpc.png)
+![](unifmu_model.png)
+
+<!-- <figure>
+    <img src={{get_url(path='publications/unifmu_rpc.png')}} width=49%>
+    <img src={{get_url(path='publications/unifmu_model.png')}} width=30%>
+<figure> -->
+
+
+## Portable runtime environments for Python-based FMUs: Adding Docker support to UniFMU
+
+Co-simulation is a means to combine and leverage the strengths of different modeling tools, environments and formalisms and has been applied successfully in various domains. 
+The Functional Mock-Up Interface (FMI) is the most commonly used standard for co-simulation. 
+In this paper we extend UniFMU, a tool that allows users to build Functional Mock-Up Units (FMUs) in virtually any programming language, to support execution within Docker. 
+As a result the generated FMUs can be distributed in an environment containing all runtime dependencies. 
+To describe the process of creating Dockerized FMUs using UniFMU, we show how to model and co-simulate a robotic arm and a controller using two Python-based FMUs.
+
+[Paper](https://doi.org/10.3384/ecp21181419) | [Tool](https://github.com/INTO-CPS-Association/unifmu) | [Models](https://github.com/Daniella1/robot_unifmu)
+
+![](unifmu_robot.png)
+![](unifmu_results.png)
+![](unifmu_docker.png)
+
+<!-- <figure>
+    <img src={{get_url(path='publications/unifmu_robot.png')}} height=70px>
+    <img src={{get_url(path='publications/unifmu_results.png')}} height=70px>
+    <img src={{get_url(path='publications/unifmu_docker.png')}} height=70px>
+<figure> -->
 
 
 ## Coupling physical and machine learning models: case study of a single-family house
@@ -37,10 +67,12 @@ Future intelligent and integrated energy systems must have a high degree of flex
 [Code](https://github.com/tug-cps/NextHyb2)
 
 
-<figure>
+![](house_model.png)
+![](house_prediction.png)
+<!-- <figure>
     <img src={{get_url(path='publications/house_model.png')}} alt="schematic of house" width=49%>
     <img src={{get_url(path='publications/house_prediction.png')}} alt="time series prediction" width=49%>
-<figure>
+<figure> -->
 
 ## Energy Prediction under Changed Demand Conditions: Robust Machine Learning Models and Input Feature Combinations
 Deciding on a suitable algorithm for energy demand prediction in a building is non-trivial and depends on the availability of data. 
@@ -50,9 +82,10 @@ We provide a hands-on guide and supply a Python framework for building operators
 
 [Paper](https://doi.org/10.26868/25222708.2021.30806)
 
-<figure>
+![](features_vs_accuracy.png)
+<!-- <figure>
     <img src={{get_url(path='publications/features_vs_accuracy.png')}} alt="number of features and accuracy of model" width=70%>
-<figure>
+<figure> -->
 
 # 2020
 
@@ -69,7 +102,9 @@ The advantages of this approach are demonstrated in an industrial use case, wher
 [Tool](https://github.com/INTO-CPS-Association/pyfmu) | 
 [Models](https://github.com/INTO-CPS-Association/pyfmu/releases/tag/0.0.4)
 
-<figure>
+![](robotti.png)
+![](tracking_simulator.png)
+<!-- <figure>
     <img src={{get_url(path='publications/robotti.png')}} alt="Agricultural robot" width=70%>
     <img src={{get_url(path='publications/tracking_simulator.png')}} alt="Tracking simulator" width=70%>
-</figure>
+</figure> -->
