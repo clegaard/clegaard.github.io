@@ -7,6 +7,7 @@ timeZone = "Europe/Berlin"
 timeout = "120s"
 title = "Gallery"
 theme = "gallery"
+baseURL = "https://christianlegaard.com/"
 
 [params]
 defaultTheme = "dark"
