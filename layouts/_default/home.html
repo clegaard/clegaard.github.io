@@ -25,17 +25,25 @@
             <div class="landing-option">
                 <a href="/gallery/" class="landing-button gallery-button">
                     <div class="landing-icon">📸</div>
-                    <h2>Photography Gallery</h2>
-                    <p>Explore my collection of nature, wildlife, and landscape photography from travels around the
-                        world.</p>
+                    <h2>Gallery</h2>
+                    <p>Explore my collection of wildlife and landscape photos from travels around the world.</p>
                 </a>
             </div>
 
             <div class="landing-option">
                 <a href="/blog/" class="landing-button blog-button">
                     <div class="landing-icon">✍️</div>
-                    <h2>Personal Blog</h2>
+                    <h2>Blog</h2>
                     <p>Read about my photography journey, travel stories, and thoughts on the places I've visited.</p>
+                </a>
+            </div>
+
+            <div class="landing-option">
+                <a href="/cv/" class="landing-button cv-button">
+                    <div class="landing-icon">📄</div>
+                    <h2>Curriculum Vitae</h2>
+                    <p>Learn about my professional background, experience, and qualifications in technology and beyond.
+                    </p>
                 </a>
             </div>
         </div>
@@ -107,15 +115,28 @@
 
     .landing-navigation {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         gap: 2rem;
         margin-top: 3rem;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
         .landing-navigation {
             grid-template-columns: 1fr;
             gap: 1.5rem;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        .landing-navigation {
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .landing-option:nth-child(3) {
+            grid-column: 1 / -1;
+            max-width: 50%;
+            margin: 0 auto;
         }
     }
 
@@ -206,6 +227,10 @@
 
     .blog-button:hover {
         background: linear-gradient(135deg, rgba(255, 154, 0, 0.1) 0%, rgba(255, 206, 84, 0.1) 100%);
+    }
+
+    .cv-button:hover {
+        background: linear-gradient(135deg, rgba(138, 43, 226, 0.1) 0%, rgba(75, 0, 130, 0.1) 100%);
     }
 </style>
 {{ end }}

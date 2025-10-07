@@ -1,19 +1,19 @@
 ---
-description: A personal gallery and blog for sharing nature related photos and thoughts from my travels
-title: Christian Legaard Photography
+description: '
+
+Welcome to my website! I''m Christian a machine learning researcher who fell in love with the ocean and capturing the beauty of the natural world around us through photography.
+
+You can explore my creative work in the gallery below, read my blog posts or get an idea of the research i was doing during my PhD doctorate.
+'
+title: Christian Legaard
 resources:
   - src: martin-martz-wRuhOOaG-Z4-unsplash.jpg
     params:
       cover: true # cover of the home page is used for OpenGraph cards, etc.
-  - src: headshot.jpeg
-    params:
-      headshot: true
 menus:
   main:
     name: Home
     weight: -1
 ---
 
-Welcome to my photography world. I'm Christian, a passionate photographer who loves capturing the beauty of nature, wildlife, and landscapes during my travels.
 
-This is your gateway to explore my work and read about the stories behind the images. Choose your path below to dive into either my photography collections or read about the adventures that led to these captures.

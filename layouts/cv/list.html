@@ -1,0 +1,181 @@
+{{ define "main" }}
+<article class="cv-container">
+    <div class="cv-content">
+        {{ .Content }}
+    </div>
+
+    <div class="cv-actions">
+        <a href="javascript:window.print()" class="cv-button print-button">
+            📄 Print CV
+        </a>
+        <a href="/cv/christian-legaard-cv.pdf" class="cv-button download-button" target="_blank">
+            ⬇️ Download PDF
+        </a>
+        <a href="/" class="cv-button back-button">
+            ← Back to Home
+        </a>
+    </div>
+</article>
+
+<style>
+    .cv-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+        line-height: 1.6;
+    }
+
+    .cv-content {
+        background: var(--bg-secondary);
+        padding: 3rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+    }
+
+    .cv-content h1 {
+        color: var(--accent);
+        text-align: center;
+        margin-bottom: 0.5rem;
+        font-size: 2.5rem;
+    }
+
+    .cv-content h1+p {
+        text-align: center;
+        font-style: italic;
+        color: var(--text-secondary);
+        margin-bottom: 2rem;
+        font-size: 1.2rem;
+    }
+
+    .cv-content h2 {
+        color: var(--accent);
+        border-bottom: 2px solid var(--accent);
+        padding-bottom: 0.5rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .cv-content h3 {
+        color: var(--text-primary);
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .cv-content hr {
+        border: none;
+        border-top: 1px solid var(--border);
+        margin: 2rem 0;
+    }
+
+    .cv-content ul {
+        margin: 1rem 0;
+        padding-left: 2rem;
+    }
+
+    .cv-content li {
+        margin: 0.5rem 0;
+    }
+
+    .cv-content strong {
+        color: var(--text-primary);
+    }
+
+    .cv-content em {
+        color: var(--text-secondary);
+    }
+
+    .cv-content a {
+        color: var(--accent);
+        text-decoration: none;
+    }
+
+    .cv-content a:hover {
+        text-decoration: underline;
+    }
+
+    .cv-actions {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .cv-button {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        background: var(--bg-secondary);
+        border: 2px solid var(--border);
+        border-radius: 8px;
+        text-decoration: none;
+        color: var(--text-primary);
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+
+    .cv-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        border-color: var(--accent);
+    }
+
+    .print-button:hover {
+        background: linear-gradient(135deg, rgba(74, 144, 226, 0.1) 0%, rgba(80, 200, 120, 0.1) 100%);
+    }
+
+    .download-button:hover {
+        background: linear-gradient(135deg, rgba(255, 154, 0, 0.1) 0%, rgba(255, 206, 84, 0.1) 100%);
+    }
+
+    .back-button:hover {
+        background: linear-gradient(135deg, rgba(138, 43, 226, 0.1) 0%, rgba(75, 0, 130, 0.1) 100%);
+    }
+
+    @media (max-width: 768px) {
+        .cv-content {
+            padding: 2rem 1.5rem;
+        }
+
+        .cv-content h1 {
+            font-size: 2rem;
+        }
+
+        .cv-actions {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cv-button {
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+        }
+    }
+
+    @media print {
+        .cv-actions {
+            display: none;
+        }
+
+        .cv-container {
+            max-width: none;
+            padding: 0;
+        }
+
+        .cv-content {
+            background: white;
+            box-shadow: none;
+            padding: 1rem;
+        }
+
+        .cv-content h1,
+        .cv-content h2 {
+            color: #333;
+        }
+
+        .cv-content h2 {
+            border-bottom-color: #333;
+        }
+    }
+</style>
+{{ end }}
