@@ -1,17 +1,17 @@
 copyright = "© Christian Legaard"
 defaultContentLanguage = "en"
-disableKinds = ["taxonomy"]
+disableKinds = ["taxonomy", "term"]
 enableRobotsTXT = true
 languageCode = "en"
 timeZone = "Europe/Berlin"
 timeout = "120s"
-title = "Gallery"
+title = "Christian Legaard"
 theme = "gallery"
 baseURL = "https://christianlegaard.com/"
 
 [params]
 defaultTheme = "dark"
-description = "Photos from somewhere out there"
+description = "A collection of my thoughts of the world and experiences in nature"
 title = "My Gallery"
 [params.author]
 email = "clegaard@outlook.com"
