@@ -76,6 +76,13 @@
         }
     }
 
+    /* Hide theme toggle when printing */
+    @media print {
+        .theme-toggle {
+            display: none !important;
+        }
+    }
+
     /* Light theme overrides */
     [data-theme="light"] {
         --bg: #ffffff;
