@@ -1,0 +1,29 @@
+{{ define "main" }}
+{{ partial "title.html" . }}
+
+{{ if .Content }}
+<div class="gallery-intro">
+    {{ .Content }}
+</div>
+{{ end }}
+
+{{ partial "categories.html" }}
+{{ partial "featured.html" . }}
+
+<section class="galleries">
+    {{ range where .Pages "Params.private" "ne" true }}
+    {{ partial "album-card.html" . }}
+    {{ end }}
+</section>
+
+<style>
+    .gallery-intro {
+        text-align: center;
+        margin: 2rem 0 3rem;
+        padding: 0 1rem;
+        color: var(--text-secondary);
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+</style>
+{{ end }}

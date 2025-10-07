@@ -1,0 +1,92 @@
+{{ define "main" }}
+{{ partial "title.html" . }}
+
+{{ if .Content }}
+<div class="blog-intro">
+    {{ .Content }}
+</div>
+{{ end }}
+
+<section class="blog-posts">
+    {{ range .Pages }}
+    <article class="blog-post-card">
+        <a href="{{ .Permalink }}" class="post-link">
+            <div class="post-meta">
+                <time datetime="{{ .Date.Format " 2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+            </div>
+            <h2 class="post-title">{{ .Title }}</h2>
+            {{ if .Description }}
+            <p class="post-description">{{ .Description }}</p>
+            {{ else if .Summary }}
+            <p class="post-description">{{ .Summary }}</p>
+            {{ end }}
+            <div class="read-more">Read more →</div>
+        </a>
+    </article>
+    {{ end }}
+</section>
+
+<style>
+    .blog-intro {
+        text-align: center;
+        margin: 2rem 0 3rem;
+        padding: 0 1rem;
+        color: var(--text-secondary);
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    .blog-posts {
+        display: grid;
+        gap: 1.5rem;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .blog-post-card {
+        background: var(--bg-secondary);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .blog-post-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        border-color: var(--accent);
+    }
+
+    .post-link {
+        display: block;
+        padding: 1.5rem;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .post-meta {
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+        margin-bottom: 0.5rem;
+    }
+
+    .post-title {
+        margin: 0 0 1rem 0;
+        font-size: 1.4rem;
+        color: var(--text-primary);
+        line-height: 1.3;
+    }
+
+    .post-description {
+        margin: 0 0 1rem 0;
+        color: var(--text-secondary);
+        line-height: 1.5;
+    }
+
+    .read-more {
+        color: var(--accent);
+        font-weight: 500;
+        font-size: 0.9rem;
+    }
+</style>
+{{ end }}

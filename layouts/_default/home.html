@@ -1,0 +1,211 @@
+{{ define "main" }}
+<div class="landing-hero">
+    <div class="profile-section">
+        <div class="profile-image">
+            {{ $headshot := .Resources.GetMatch "headshot.jpeg" }}
+            {{ if $headshot }}
+            {{ $headshotResized := $headshot.Resize "300x300" }}
+            <img src="{{ $headshotResized.RelPermalink }}" alt="Christian Legaard" />
+            {{ else }}
+            <img src="/headshot.jpeg" alt="Christian Legaard" />
+            {{ end }}
+        </div>
+    </div>
+
+    {{ partial "title.html" . }}
+
+    <div class="landing-content">
+        {{ if .Content }}
+        <div class="landing-description">
+            {{ .Content }}
+        </div>
+        {{ end }}
+
+        <div class="landing-navigation">
+            <div class="landing-option">
+                <a href="/gallery/" class="landing-button gallery-button">
+                    <div class="landing-icon">📸</div>
+                    <h2>Photography Gallery</h2>
+                    <p>Explore my collection of nature, wildlife, and landscape photography from travels around the
+                        world.</p>
+                </a>
+            </div>
+
+            <div class="landing-option">
+                <a href="/blog/" class="landing-button blog-button">
+                    <div class="landing-icon">✍️</div>
+                    <h2>Personal Blog</h2>
+                    <p>Read about my photography journey, travel stories, and thoughts on the places I've visited.</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .landing-hero {
+        text-align: center;
+        padding: 2rem 0 4rem;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .profile-section {
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .profile-image {
+        position: relative;
+        width: 188px;
+        height: 188px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 4px solid var(--accent);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+        background: linear-gradient(135deg, var(--accent) 0%, rgba(255, 255, 255, 0.1) 100%);
+        padding: 4px;
+    }
+
+    .profile-image:hover {
+        transform: scale(1.05);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .profile-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+    }
+
+    .profile-image:hover img {
+        transform: scale(1.02);
+    }
+
+    @media (max-width: 768px) {
+        .profile-image {
+            width: 150px;
+            height: 150px;
+        }
+    }
+
+    .landing-content {
+        margin-top: 2rem;
+    }
+
+    .landing-description {
+        margin-bottom: 3rem;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: var(--text-secondary);
+    }
+
+    .landing-navigation {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    @media (max-width: 768px) {
+        .landing-navigation {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+    }
+
+    .landing-option {
+        position: relative;
+    }
+
+    .landing-button {
+        display: block;
+        padding: 2rem;
+        background: var(--bg-secondary);
+        border: 2px solid var(--border);
+        border-radius: 12px;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.3s ease;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    .landing-button:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        border-color: var(--accent);
+    }
+
+    .landing-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .landing-button h2 {
+        margin: 0 0 1rem 0;
+        font-size: 1.5rem;
+        color: var(--text-primary);
+    }
+
+    .landing-button p {
+        margin: 0;
+        color: var(--text-secondary);
+        line-height: 1.5;
+    }
+
+    .gallery-button {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('/gallery/animals/underwater/whale_shark.jpeg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .gallery-button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, rgba(74, 144, 226, 0.2) 0%, rgba(80, 200, 120, 0.2) 100%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .gallery-button:hover::before {
+        opacity: 1;
+    }
+
+    .gallery-button:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .gallery-button * {
+        position: relative;
+        z-index: 1;
+        color: white;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .gallery-button h2 {
+        color: white !important;
+    }
+
+    .gallery-button p {
+        color: rgba(255, 255, 255, 0.9) !important;
+    }
+
+    .blog-button:hover {
+        background: linear-gradient(135deg, rgba(255, 154, 0, 0.1) 0%, rgba(255, 206, 84, 0.1) 100%);
+    }
+</style>
+{{ end }}

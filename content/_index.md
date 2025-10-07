@@ -1,17 +1,19 @@
 ---
 description: A personal gallery and blog for sharing nature related photos and thoughts from my travels
-#lastmod: 2023-07-05
-title: Somewhere out there
+title: Christian Legaard Photography
 resources:
   - src: martin-martz-wRuhOOaG-Z4-unsplash.jpg
     params:
       cover: true # cover of the home page is used for OpenGraph cards, etc.
+  - src: headshot.jpeg
+    params:
+      headshot: true
 menus:
   main:
     name: Home
     weight: -1
-# sub-galleries on list pages are sorted by date and weight (descending)
-#cascade:
-#  build:
-#    publishResources: false # do not include full images. Also disable download
 ---
+
+Welcome to my photography world. I'm Christian, a passionate photographer who loves capturing the beauty of nature, wildlife, and landscapes during my travels.
+
+This is your gateway to explore my work and read about the stories behind the images. Choose your path below to dive into either my photography collections or read about the adventures that led to these captures.
