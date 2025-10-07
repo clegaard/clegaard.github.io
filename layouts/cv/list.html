@@ -8,9 +8,6 @@
         <a href="javascript:window.print()" class="cv-button print-button">
             📄 Print CV
         </a>
-        <a href="/cv/christian-legaard-cv.pdf" class="cv-button download-button" target="_blank">
-            ⬇️ Download PDF
-        </a>
         <a href="/" class="cv-button back-button">
             ← Back to Home
         </a>
@@ -148,8 +145,6 @@
         height: 60px;
         display: inline-block;
         margin: 0 10px 0 0;
-        border-radius: 4px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         vertical-align: middle;
         transition: transform 0.2s ease;
     }
@@ -165,6 +160,94 @@
             height: 51px;
             margin-right: 8px;
             margin-left: 0;
+        }
+    }
+
+    /* PNNL Logo styling */
+    .cv-content img[src*="pnnl_logo"] {
+        width: 60px;
+        height: 60px;
+        display: inline-block;
+        margin: 0 10px 0 0;
+        vertical-align: middle;
+        transition: transform 0.2s ease;
+    }
+
+    .cv-content img[src*="pnnl_logo"]:hover {
+        transform: scale(1.1);
+    }
+
+    /* Mobile PNNL logo adjustments */
+    @media (max-width: 768px) {
+        .cv-content img[src*="pnnl_logo"] {
+            width: 51px;
+            height: 51px;
+            margin-right: 8px;
+            margin-left: 0;
+        }
+    }
+
+    /* ECN Logo styling */
+    .cv-content img[src*="ecn_logo"] {
+        width: 60px;
+        height: 60px;
+        display: inline-block;
+        margin: 0 10px 0 0;
+        vertical-align: middle;
+        transition: transform 0.2s ease;
+    }
+
+    .cv-content img[src*="ecn_logo"]:hover {
+        transform: scale(1.1);
+    }
+
+    /* Mobile ECN logo adjustments */
+    @media (max-width: 768px) {
+        .cv-content img[src*="ecn_logo"] {
+            width: 51px;
+            height: 51px;
+            margin-right: 8px;
+            margin-left: 0;
+        }
+    }
+
+    /* KU Leuven Logo styling */
+    .cv-content img[src*="ku_leuven_logo"] {
+        width: 60px;
+        height: 60px;
+        display: inline-block;
+        margin: 0 10px 0 0;
+        vertical-align: middle;
+        transition: transform 0.2s ease;
+    }
+
+    .cv-content img[src*="ku_leuven_logo"]:hover {
+        transform: scale(1.1);
+    }
+
+    /* Mobile KU Leuven logo adjustments */
+    @media (max-width: 768px) {
+        .cv-content img[src*="ku_leuven_logo"] {
+            width: 51px;
+            height: 51px;
+            margin-right: 8px;
+            margin-left: 0;
+        }
+    }
+
+    /* Education section text alignment */
+    .cv-content h3+p {
+        margin-left: 70px;
+        /* Align with right edge of 60px logo + 10px margin */
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Mobile education text alignment */
+    @media (max-width: 768px) {
+        .cv-content h3+p {
+            margin-left: 59px;
+            /* Align with right edge of 51px logo + 8px margin */
         }
     }
 

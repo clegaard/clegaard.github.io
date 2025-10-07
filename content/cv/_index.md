@@ -56,7 +56,22 @@ PhD graduate from Aarhus University with expertise in Deep Learning, Numerical S
 ## Education
 
 ### ![image](/images/au_logo.svg) **(2020-2023) PhD Doctorate** -- Aarhus University
-Here is some text
+
+PhD research developing methods for integrating prior knowledge and physical constraints into machine learning models to create more accurate and robust models of physical systems.
+Specifically, my research surveyed how state-of-the-art models neural ordinary differential equations and physics-informed neural networks could be integrated into industrial simulation tools.
+For more details you can refer to my thesis [here](phd_thesis.pdf)
+
+### ![image](/images/pnnl_logo.svg) **(2022) Visiting Researcher** -- Pacific Northwest National Laboratory
+Research visit over the summer/fall to collaborate with long term research partner.
+My main contributions were to the development of a PyTorch-based framework for constrained optimization framework called NeuroMANCER to allow interoperability with native Numpy as PyTorch operation.
+
+
+### ![image](/images/ecn_logo.svg) **(2021) Visiting Researcher** -- École Centrale de Nantes
+Research visit to learn more PDEs, methods to solve them, and ways to accelerate simulation by creating reduced order models.
+
+### ![image](/images/ku_leuven_logo.svg) **(2019-2021) Erasmus Exchange**, KU Leuven
+Erasmus exchange to KU Leuven for electives during my Master's degree.
+Courses included: Model Predictive Control, Industrial Automation and Control, System Identification, and Advanced Robotics
 
 ### ![image](/images/au_logo.svg) **(2018-2020) Master of Science**, Computer Engineering - Aarhus University
 Here is some more text
