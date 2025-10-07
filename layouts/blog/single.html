@@ -56,36 +56,169 @@
     }
 
     .post-content {
-        line-height: 1.7;
+        line-height: 1.8;
         font-size: 1.1rem;
+        color: var(--text-primary);
+        text-align: justify;
+        text-justify: inter-word;
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .post-content h1 {
+        margin: 3rem 0 1.5rem 0;
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        line-height: 1.3;
     }
 
     .post-content h2 {
         margin: 2.5rem 0 1rem 0;
+        font-size: 1.8rem;
+        font-weight: 600;
         color: var(--text-primary);
+        line-height: 1.3;
     }
 
     .post-content h3 {
         margin: 2rem 0 0.5rem 0;
+        font-size: 1.5rem;
+        font-weight: 600;
         color: var(--text-primary);
+        line-height: 1.4;
+    }
+
+    .post-content h4 {
+        margin: 1.5rem 0 0.5rem 0;
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        line-height: 1.4;
+    }
+
+    .post-content h5 {
+        margin: 1.5rem 0 0.5rem 0;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        line-height: 1.4;
+    }
+
+    .post-content h6 {
+        margin: 1rem 0 0.5rem 0;
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        line-height: 1.4;
     }
 
     .post-content p {
-        margin: 1rem 0;
+        margin: 1.5rem 0;
+        text-indent: 0;
+        hanging-punctuation: first last;
+    }
+
+    .post-content p:first-of-type {
+        margin-top: 0;
+    }
+
+    .post-content p:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .post-content p+p {
+        margin-top: 1.2rem;
     }
 
     .post-content ul,
     .post-content ol {
-        margin: 1rem 0;
-        padding-left: 2rem;
+        margin: 1.5rem 0;
+        padding-left: 2.5rem;
+        line-height: 1.7;
+    }
+
+    .post-content li {
+        margin: 0.5rem 0;
+        text-align: left;
+    }
+
+    .post-content li p {
+        margin: 0.5rem 0;
     }
 
     .post-content blockquote {
-        margin: 2rem 0;
-        padding: 1rem 2rem;
+        margin: 2.5rem 0;
+        padding: 1.5rem 2rem;
         background: var(--bg-secondary);
         border-left: 4px solid var(--accent);
         font-style: italic;
+        font-size: 1.05rem;
+        line-height: 1.6;
+        border-radius: 0 8px 8px 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .post-content blockquote p {
+        margin: 0;
+        text-align: left;
+    }
+
+    .post-content img {
+        margin: 2rem auto;
+        display: block;
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .post-content code {
+        background: var(--bg-secondary);
+        padding: 0.2rem 0.4rem;
+        border-radius: 4px;
+        font-size: 0.9em;
+        font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    }
+
+    .post-content pre {
+        background: var(--bg-secondary);
+        padding: 1.5rem;
+        border-radius: 8px;
+        overflow-x: auto;
+        margin: 2rem 0;
+        border: 1px solid var(--border);
+    }
+
+    .post-content pre code {
+        background: none;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .post-content a {
+        color: var(--accent);
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: all 0.2s ease;
+    }
+
+    .post-content a:hover {
+        border-bottom-color: var(--accent);
+        opacity: 0.8;
+    }
+
+    .post-content strong {
+        font-weight: 600;
+        color: var(--text-primary);
+    }
+
+    .post-content em {
+        font-style: italic;
+        color: var(--text-secondary);
     }
 
     .post-footer {
@@ -113,6 +246,355 @@
 
         .post-content {
             font-size: 1rem;
+            line-height: 1.7;
+            text-align: left;
+            padding: 0 0.5rem;
+        }
+
+        .post-content p {
+            margin: 1.2rem 0;
+        }
+
+        .post-content ul,
+        .post-content ol {
+            padding-left: 2rem;
+        }
+
+        .post-content blockquote {
+            margin: 2rem -0.5rem;
+            padding: 1rem 1.5rem;
+            border-radius: 0;
+        }
+
+        .post-content h1 {
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .post-content h2 {
+            font-size: 1.5rem;
+            margin: 2rem 0 0.8rem 0;
+        }
+
+        .post-content h3 {
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.5rem 0;
+        }
+
+        .post-content h4 {
+            font-size: 1.2rem;
+        }
+
+        .post-content h5 {
+            font-size: 1.1rem;
+        }
+
+        .post-content h6 {
+            font-size: 1rem;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Find all images in the post content
+        const postContent = document.querySelector('.post-content');
+        const images = Array.from(postContent.querySelectorAll('img'));
+
+        if (images.length === 0) return;
+
+        // Group adjacent images
+        const imageGroups = [];
+        let currentGroup = [];
+
+        images.forEach((img, index) => {
+            const imgParent = img.parentElement;
+            const prevImage = images[index - 1];
+
+            // Check if this image is adjacent to the previous one
+            if (prevImage && isAdjacent(prevImage.parentElement, imgParent)) {
+                // If current group is empty, add the previous image first
+                if (currentGroup.length === 0) {
+                    currentGroup.push(prevImage);
+                }
+                currentGroup.push(img);
+            } else {
+                // Start a new group or finish the current one
+                if (currentGroup.length > 1) {
+                    imageGroups.push([...currentGroup]);
+                }
+                currentGroup = [img];
+            }
+        });
+
+        // Don't forget the last group
+        if (currentGroup.length > 1) {
+            imageGroups.push(currentGroup);
+        }
+
+        // Convert groups with 2+ images to carousels
+        imageGroups.forEach(group => {
+            if (group.length >= 2) {
+                createCarousel(group);
+            }
+        });
+    });
+
+    function isAdjacent(elem1, elem2) {
+        // Check if elements are adjacent siblings or close to each other
+        let current = elem1.nextElementSibling;
+        let steps = 0;
+
+        while (current && steps < 3) { // Allow up to 3 elements between images
+            if (current === elem2) {
+                return true;
+            }
+            // Skip empty text nodes and small elements
+            if (current.nodeType === 1 && (!current.textContent.trim() || current.textContent.trim().length < 10)) {
+                current = current.nextElementSibling;
+                steps++;
+            } else if (current.nodeType === 1) {
+                break;
+            } else {
+                current = current.nextElementSibling;
+                steps++;
+            }
+        }
+        return false;
+    }
+
+    function createCarousel(images) {
+        // Store the position where the carousel should be inserted
+        const firstImage = images[0];
+        const insertionPoint = firstImage.parentElement;
+        const parentContainer = insertionPoint.parentElement;
+
+        // Create carousel container
+        const carousel = document.createElement('div');
+        carousel.className = 'image-carousel';
+
+        // Create carousel track
+        const track = document.createElement('div');
+        track.className = 'carousel-track';
+
+        // Create carousel images
+        images.forEach((img, index) => {
+            const slide = document.createElement('div');
+            slide.className = 'carousel-slide';
+            if (index === 0) slide.classList.add('active');
+
+            const newImg = img.cloneNode(true);
+            slide.appendChild(newImg);
+            track.appendChild(slide);
+        });
+
+        // Create navigation dots
+        const dotsContainer = document.createElement('div');
+        dotsContainer.className = 'carousel-dots';
+
+        images.forEach((_, index) => {
+            const dot = document.createElement('button');
+            dot.className = 'carousel-dot';
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(index));
+            dotsContainer.appendChild(dot);
+        });
+
+        // Create navigation arrows
+        const prevBtn = document.createElement('button');
+        prevBtn.className = 'carousel-btn carousel-prev';
+        prevBtn.innerHTML = '‹';
+        prevBtn.addEventListener('click', () => changeSlide(-1));
+
+        const nextBtn = document.createElement('button');
+        nextBtn.className = 'carousel-btn carousel-next';
+        nextBtn.innerHTML = '›';
+        nextBtn.addEventListener('click', () => changeSlide(1));
+
+        // Assemble carousel
+        carousel.appendChild(track);
+        carousel.appendChild(prevBtn);
+        carousel.appendChild(nextBtn);
+        carousel.appendChild(dotsContainer);
+
+        // Insert carousel in the exact position of the first image
+        parentContainer.insertBefore(carousel, insertionPoint);
+
+        // Remove original images and their containers after insertion
+        images.forEach(img => {
+            const parent = img.parentElement;
+            if (parent.tagName === 'P' && parent.children.length === 1 && parent.textContent.trim() === '') {
+                parent.remove();
+            } else {
+                img.remove();
+            }
+        });
+
+        // Carousel functionality
+        let currentSlide = 0;
+        const slides = track.querySelectorAll('.carousel-slide');
+        const dots = dotsContainer.querySelectorAll('.carousel-dot');
+
+        function goToSlide(index) {
+            slides[currentSlide].classList.remove('active');
+            dots[currentSlide].classList.remove('active');
+
+            currentSlide = index;
+
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        function changeSlide(direction) {
+            const newSlide = currentSlide + direction;
+            if (newSlide >= 0 && newSlide < slides.length) {
+                goToSlide(newSlide);
+            }
+        }
+
+        // Touch/swipe support
+        let startX = 0;
+        let currentX = 0;
+        let isDragging = false;
+
+        carousel.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+            isDragging = true;
+        });
+
+        carousel.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            currentX = e.touches[0].clientX;
+        });
+
+        carousel.addEventListener('touchend', () => {
+            if (!isDragging) return;
+            isDragging = false;
+
+            const diff = startX - currentX;
+            if (Math.abs(diff) > 50) { // Minimum swipe distance
+                if (diff > 0) {
+                    changeSlide(1); // Swipe left - next
+                } else {
+                    changeSlide(-1); // Swipe right - prev
+                }
+            }
+        });
+    }
+</script>
+
+<style>
+    /* Carousel Styles */
+    .image-carousel {
+        position: relative;
+        margin: 2rem 0;
+        border-radius: 12px;
+        overflow: hidden;
+        background: var(--bg-secondary);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .carousel-track {
+        display: flex;
+        transition: transform 0.3s ease;
+        width: 100%;
+    }
+
+    .carousel-slide {
+        min-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--bg-secondary);
+    }
+
+    .carousel-slide img {
+        width: 100%;
+        height: auto;
+        max-height: 70vh;
+        object-fit: contain;
+        display: block;
+    }
+
+    .carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        cursor: pointer;
+        z-index: 10;
+        transition: all 0.2s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .carousel-btn:hover {
+        background: rgba(0, 0, 0, 0.7);
+        transform: translateY(-50%) scale(1.1);
+    }
+
+    .carousel-prev {
+        left: 15px;
+    }
+
+    .carousel-next {
+        right: 15px;
+    }
+
+    .carousel-dots {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        padding: 15px;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.1));
+    }
+
+    .carousel-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: none;
+        background: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .carousel-dot.active {
+        background: white;
+        transform: scale(1.2);
+    }
+
+    .carousel-dot:hover {
+        background: rgba(255, 255, 255, 0.8);
+    }
+
+    /* Mobile optimizations */
+    @media (max-width: 768px) {
+        .carousel-btn {
+            width: 35px;
+            height: 35px;
+            font-size: 1.2rem;
+        }
+
+        .carousel-prev {
+            left: 10px;
+        }
+
+        .carousel-next {
+            right: 10px;
+        }
+
+        .carousel-slide img {
+            max-height: 50vh;
         }
     }
 </style>
