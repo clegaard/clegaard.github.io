@@ -1,1 +1,120 @@
 <!-- Custom <head> tags (e.g. analytics code) -->
+
+<!-- Theme Toggle Functionality -->
+<script>
+    // Theme toggle functionality
+    (function () {
+        // Check for saved theme preference or default to dark
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', currentTheme);
+
+        // Add toggle button when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function () {
+            // Create toggle button
+            const toggleButton = document.createElement('button');
+            toggleButton.className = 'theme-toggle';
+            toggleButton.setAttribute('aria-label', 'Toggle theme');
+            toggleButton.innerHTML = currentTheme === 'light' ? '🌙' : '☀️';
+
+            // Add click event
+            toggleButton.addEventListener('click', function () {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+                // Update theme
+                document.documentElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+
+                // Update button icon
+                toggleButton.innerHTML = newTheme === 'light' ? '🌙' : '☀️';
+            });
+
+            // Add button to page
+            document.body.appendChild(toggleButton);
+        });
+    })();
+</script>
+
+<style>
+    /* Theme toggle button styles */
+    .theme-toggle {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+        background: var(--bg-secondary);
+        border: 2px solid var(--border);
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .theme-toggle:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .theme-toggle:active {
+        transform: scale(0.95);
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+        .theme-toggle {
+            bottom: 15px;
+            right: 15px;
+            width: 45px;
+            height: 45px;
+            font-size: 1.3rem;
+        }
+    }
+
+    /* Light theme overrides */
+    [data-theme="light"] {
+        --bg: #ffffff;
+        --bg-secondary: #f8f9fa;
+        --text-primary: #212529;
+        --text-secondary: #6c757d;
+        --border: #dee2e6;
+        --accent: #0d6efd;
+    }
+
+    /* Dark theme (default) */
+    [data-theme="dark"] {
+        --bg: #1a1a1a;
+        --bg-secondary: #2d2d2d;
+        --text-primary: #ffffff;
+        --text-secondary: #b0b0b0;
+        --border: #404040;
+        --accent: #4a90e2;
+    }
+
+    /* Ensure smooth transitions */
+    * {
+        transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    }
+
+    /* Override theme class-based styling with data attributes */
+    [data-theme="light"] body,
+    [data-theme="light"] .landing-hero,
+    [data-theme="light"] .landing-button,
+    [data-theme="light"] .cv-content {
+        background-color: var(--bg);
+        color: var(--text-primary);
+    }
+
+    [data-theme="dark"] body,
+    [data-theme="dark"] .landing-hero,
+    [data-theme="dark"] .landing-button,
+    [data-theme="dark"] .cv-content {
+        background-color: var(--bg);
+        color: var(--text-primary);
+    }
+</style>

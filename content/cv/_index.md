@@ -5,95 +5,85 @@ menus:
   main:
     name: CV
     weight: 3
+resources:
+  - src: map_winner_2025.png
+    params:
+      award: true
+  - src: headshot.jpeg
+    params:
+      headshot: true
 ---
 
-# Christian Møldrup Legaard
+# Christian Møldrup Legaard, PhD
 
-**Professional Photographer & Technology Specialist**
+![Christian Legaard Headshot](/headshot.jpeg "Christian Møldrup Legaard")
 
----
+**Scientific Machine Learning Researcher | Wildlife Photographer**
 
 ## Contact Information
+- 💻 **Website**: www.christianlegaard.com
+- 📧 **Email**: clegaard@outlook.com
+- 📍 **Location**: Aarhus, Denmark
+- 💼 **LinkedIn**: [christian-moeldrup-legaard](https://www.linkedin.com/in/christian-moeldrup-legaard/)
+- 🎓 **Google Scholar**: [NwJFl9cAAAAJ](https://scholar.google.com/citations?user=NwJFl9cAAAAJ&hl=en)
+- 💻 **GitHub**: [https://github.com/clegaard/](https://github.com/clegaard/)
 
-- **Email**: clegaard@outlook.com
-- **Location**: Denmark
-- **LinkedIn**: [christian-møldrup-legaard](https://www.linkedin.com/in/christian-moeldrup-legaard/)
-- **Photography Portfolio**: [christianlegaard.com](https://christianlegaard.com)
-
----
 
 ## Professional Summary
 
-Passionate photographer with a strong technical background, specializing in nature, wildlife, and landscape photography. Combines technical expertise with artistic vision to capture compelling images during travels around the world. Experienced in both digital photography and post-processing workflows.
-
----
+PhD graduate from Aarhus University with expertise in Deep Learning, Numerical Simulation, Machine Learning, and Physical Modeling. Combines advanced research capabilities with artistic passion for nature and wildlife photography. Experienced in both academic research and creative visual storytelling through travel photography around the world.
 
 ## Photography Experience
 
-### **Freelance Photographer** | *2020 - Present*
-- Nature, wildlife, and landscape photography
-- Travel photography across multiple continents
-- Digital post-processing and workflow optimization
-- Online portfolio management and presentation
+## Technical Experience
 
-### **Key Photography Achievements**
-- Extensive underwater photography portfolio
-- Wildlife photography specializing in mammals, birds, and marine life
-- Landscape photography across diverse environments
-- Technical expertise in challenging lighting conditions
+### Languages:
+* Python
+* C/C++
+* Rust
 
----
+### Skills:
+* Deep Learning (PyTorch, JAX, TensorFlow)
+* Numerical Simulation
+* Plotting and visualization (Matplotlib, Pandas)
 
-## Technical Skills
 
-### **Photography & Post-Processing**
-- Digital Photography (DSLR/Mirrorless systems)
-- Underwater Photography
-- Adobe Lightroom & Photoshop
-- Color grading and digital workflow
-- Portfolio website development (Hugo, GitHub Pages)
-
-### **Technical Expertise**
-- Web development and static site generators
-- Version control (Git/GitHub)
-- Digital asset management
-- Online portfolio optimization
-
----
+### Software:
+* Premiere Pro
+* Photoshop
+* Lightroom
 
 ## Education
 
-### **Professional Development**
-- Continuous learning in photography techniques and technology
-- Wildlife and nature photography workshops
-- Underwater photography certification
-- Digital workflow and post-processing training
+### ![image](/images/au_logo.svg) **(2020-2023) PhD Doctorate** -- Aarhus University
+Here is some text
 
----
+### ![image](/images/au_logo.svg) **(2018-2020) Master of Science**, Computer Engineering - Aarhus University
+Here is some more text
 
-## Portfolio Highlights
+### ![image](/images/au_logo.svg) **(2014-2018) Bachelor of Engineering**, Electronic Engineering -- Aarhus University
+Here is even more textdad
+ad
+ad
+da
+adw
+dwa
 
-### **Wildlife Photography**
-- Extensive collection of mammal portraits from Southeast Asia
-- Bird photography across multiple species and environments
-- Underwater marine life documentation
-- Macro photography of amphibians and reptiles
-
-### **Landscape Photography**
-- Travel landscapes from around the world
-- Drone photography and aerial perspectives
-- Long exposure and specialized techniques
-- Environmental storytelling through imagery
-
----
 
 ## Languages
 
 - **Danish**: Native
 - **English**: Fluent
-- **[Additional languages as applicable]**
 
----
+## Photography
+
+### Awards
+
+**2025 Mangrove Photography Awards - Other Species Category Winner**
+
+![Mangrove Photography Awards 2025 Winner](/cv/map_winner_2025.png "2025 Mangrove Photography Awards Winner Certificate")
+
+
 
 ## Personal Interests
 
@@ -101,7 +91,5 @@ Passionate photographer with a strong technical background, specializing in natu
 - **Marine Conservation**: Interest in underwater ecosystems and conservation
 - **Technology**: Staying current with photography technology and digital workflows
 - **Outdoor Activities**: Hiking, diving, and nature exploration
-
----
 
 *For more information about my work, please visit my photography portfolio or feel free to get in touch via email.*

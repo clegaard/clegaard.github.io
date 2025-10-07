@@ -41,7 +41,7 @@
             <div class="landing-option">
                 <a href="/cv/" class="landing-button cv-button">
                     <div class="landing-icon">📄</div>
-                    <h2>Curriculum Vitae</h2>
+                    <h2>CV</h2>
                     <p>Learn about my professional background, experience, and qualifications in technology and beyond.
                     </p>
                 </a>
@@ -229,8 +229,49 @@
         background: linear-gradient(135deg, rgba(255, 154, 0, 0.1) 0%, rgba(255, 206, 84, 0.1) 100%);
     }
 
+    .cv-button {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('/cv/research.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .cv-button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, rgba(138, 43, 226, 0.2) 0%, rgba(75, 0, 130, 0.2) 100%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .cv-button:hover::before {
+        opacity: 1;
+    }
+
     .cv-button:hover {
-        background: linear-gradient(135deg, rgba(138, 43, 226, 0.1) 0%, rgba(75, 0, 130, 0.1) 100%);
+        transform: translateY(-4px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .cv-button * {
+        position: relative;
+        z-index: 1;
+        color: white;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .cv-button h2 {
+        color: white !important;
+    }
+
+    .cv-button p {
+        color: rgba(255, 255, 255, 0.9) !important;
     }
 </style>
 {{ end }}
