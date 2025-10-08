@@ -14,7 +14,10 @@ My setup consists of:
 - 2 x BackScatter Hybrid Flash
 - SeaFrogs flash trigger (old version)
 
-![housing](seafrogs_housing.webp)
+![housing](camera_top.jpg)
+
+![housing](camera_front.jpg)
+
 
 Why this choice of camera body and lens? The main reason is that I already owned the camera body and lens.
 Given that I lived the last 1.5 years of my life out of two backpacks buying new camera system just for UW photography seemed like a waste.
@@ -27,7 +30,7 @@ For reference I bought the housing, port and flash trigger directly from SeaFrog
 
 # Impression of the housing
 
-I've owned the housing for a year and used it on roughly 50 dives.
+I've owned the housing for over year and used it on around 50 dives.
 Overall I am happy with the housing and I have never experienced any leaks.
 One of the main critiques of the SeaFrogs housings is that they are made out of plastic and not an aluminum alloy.
 Personally I don't think the material itself an issue as long as you don't drop it on a hard floor. 
@@ -41,10 +44,14 @@ That being said there is definitely room for improvement in the design of the pr
 On my housing the plungers that push the buttons on the camera body were poorly aligned which meant that button presses would not register or would register as a neighbouring button being pressed.
 To solve this I've resorted to glue rubber pads to the inside of the housing to make the button mechanisms more reliable.
 
-Another issue is that if you insert the camera without turning the on/off lever to off you risk bending and shifting the lever responisble for toggling the power on and off on the camera.
-This was easily resorted, but I contacted SeaFrogs which told me there was an easy fix which was just using more force to turn it back.
+![modified plungers](button_alignment_flipped.jpg)
+
+Another issue I encountered was that the arm on the housing resonsible for turning the camera on and off can shift on the rod it is attached to.
+This was easily resolved, but I contacted SeaFrogs which told me there was an easy fix which was forcefully turning it back.
 
 Finally, the zoom gear has a tendency to slip of the collar of the lens, leaving you stuck with a single focal lengt for the rest of your dive. This can be partially mitigated by, you guessed it, gluing stuff to the zoom gear.
+As far as I can tell this is a problem with the zoom gears for particular lenses, since other rings have the ability to lock them in place with a plastic bit screwed to the inside of the housing.
+
 Again this is not the end of the world but it is certainly something that the designers at SeaFrogs could have addressed.
 
 # SeaFrogs Flash Trigger
