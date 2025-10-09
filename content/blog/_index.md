@@ -6,4 +6,9 @@ menus:
   main:
     name: Blog
     weight: 2
+
+resources:
+- src: nerida.jpeg
+  params:
+    cover: true
 ---

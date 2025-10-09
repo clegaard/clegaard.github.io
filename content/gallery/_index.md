@@ -5,4 +5,8 @@ menus:
   main:
     name: Gallery
     weight: 1
+resources:
+- src: whale_shark.jpeg
+  params:
+    cover: true
 ---

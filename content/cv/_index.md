@@ -12,6 +12,9 @@ resources:
   - src: headshot.jpeg
     params:
       headshot: true
+  - src: research.png
+    params:
+      cover: true
 ---
 
 # Christian Møldrup Legaard, PhD
