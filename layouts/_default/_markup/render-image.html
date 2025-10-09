@@ -1,0 +1,21 @@
+{{- $image := .Page.Resources.GetMatch .Destination -}}
+{{- if $image -}}
+{{/* If image is a page resource, process it */}}
+{{- $alt := .Text -}}
+{{- $title := .Title | default $alt -}}
+
+{{/* Create different sizes for responsive images */}}
+{{- $thumbnail := $image.Filter (slice images.AutoOrient (images.Process "fit 800x600 q85")) -}}
+{{- $medium := $image.Filter (slice images.AutoOrient (images.Process "fit 1200x900 q85")) -}}
+{{- $large := $image.Filter (slice images.AutoOrient (images.Process "fit 1600x1200 q85")) -}}
+
+{{/* Generate responsive image with srcset */}}
+<img src="{{ $thumbnail.RelPermalink }}"
+    srcset="{{ $thumbnail.RelPermalink }} 800w, {{ $medium.RelPermalink }} 1200w, {{ $large.RelPermalink }} 1600w"
+    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 800px, 1200px" alt="{{ $alt }}" title="{{ $title }}"
+    width="{{ $thumbnail.Width }}" height="{{ $thumbnail.Height }}" loading="lazy"
+    data-full-src="{{ $large.RelPermalink }}" />
+{{- else -}}
+{{/* Fallback for external images or images not in page resources */}}
+<img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" title="{{ .Title | default .Text }}" loading="lazy" />
+{{- end -}}

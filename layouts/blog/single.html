@@ -541,9 +541,9 @@
             const overlay = document.createElement('div');
             overlay.className = 'fullscreen-overlay';
 
-            // Create fullscreen image
+            // Create fullscreen image - use high-res version if available
             const fullscreenImg = document.createElement('img');
-            fullscreenImg.src = img.src;
+            fullscreenImg.src = img.getAttribute('data-full-src') || img.src;
             fullscreenImg.alt = img.alt;
             fullscreenImg.className = 'fullscreen-image';
 
@@ -651,7 +651,7 @@
             // Navigation functions
             function updateFullscreenImage() {
                 const currentSlide = slides[currentIndex];
-                fullscreenImg.src = currentSlide.src;
+                fullscreenImg.src = currentSlide.getAttribute('data-full-src') || currentSlide.src;
                 fullscreenImg.alt = currentSlide.alt;
             }
 
