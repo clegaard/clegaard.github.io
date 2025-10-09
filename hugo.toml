@@ -19,7 +19,7 @@ name = "Christian Legaard"
 [params.socialIcons]
 # facebook = "https://www.facebook.com/"
 instagram = "https://www.instagram.com/christian.legaard.photography"
-# github = "https://github.com/nicokaiser/hugo-theme-gallery/"
+github = "https://github.com/clegaard"
 # youtube = "https://www.youtube.com/"
 email = "mailto:clegaard@outlook.com"
 #website = "https://example.com"
@@ -51,11 +51,11 @@ includeFields = "ImageDescription|Orientation"
 [caches.images]
 dir = ':cacheDir/images'
 
-# [menu]
-# [[menu.footer]]
-# name = "GitHub"
-# url = "https://github.com/nicokaiser/hugo-theme-gallery/"
-# weight = 3
+[menu]
+[[menu.footer]]
+name = "GitHub"
+url = "https://github.com/clegaard/clegaard.github.io"
+weight = 3
 
 [services]
 [services.rss]
