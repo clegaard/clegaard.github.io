@@ -25,30 +25,34 @@
         {{ end }}
 
         <div class="landing-navigation">
-            <div class="landing-option">
-                <a href="/gallery/" class="landing-button gallery-button">
-                    <div class="landing-icon">📸</div>
-                    <h2>Gallery</h2>
-                    <p>Explore my collection of wildlife and landscape photos from travels around the world.</p>
-                </a>
-            </div>
+            {{ range .Site.Sections.ByWeight }}
+            {{ if and .Title (ne .Title "Home") }}
+            {{ $cover := "" }}
+            {{ range .Resources }}
+            {{ if .Params.cover }}
+            {{ $cover = . }}
+            {{ end }}
+            {{ end }}
+            {{ if not $cover }}
+            {{ $cover = .Resources.GetMatch "*.{jpg,jpeg,png,webp}" }}
+            {{ end }}
+            {{ $icon := "�" }}
+            {{ if eq .Section "gallery" }}{{ $icon = "📸" }}{{ end }}
+            {{ if eq .Section "blog" }}{{ $icon = "✍️" }}{{ end }}
+            {{ if eq .Section "cv" }}{{ $icon = "📄" }}{{ end }}
 
             <div class="landing-option">
-                <a href="/blog/" class="landing-button blog-button">
-                    <div class="landing-icon">✍️</div>
-                    <h2>Blog</h2>
-                    <p>Read about my photography journey, travel stories, and thoughts on the places I've visited.</p>
+                <a href="{{ .RelPermalink }}" class="landing-button dynamic-button" data-section="{{ .Section }}">
+                    <div class="landing-icon">{{ $icon }}</div>
+                    <h2>{{ .Title }}</h2>
+                    <p>{{ .Description | default .Summary | truncate 120 }}</p>
+                    {{ if $cover }}
+                    <div class="button-background" style="background-image: url('{{ $cover.RelPermalink }}');"></div>
+                    {{ end }}
                 </a>
             </div>
-
-            <div class="landing-option">
-                <a href="/cv/" class="landing-button cv-button">
-                    <div class="landing-icon">📄</div>
-                    <h2>CV</h2>
-                    <p>Learn about my professional background, experience, and qualifications in technology and beyond.
-                    </p>
-                </a>
-            </div>
+            {{ end }}
+            {{ end }}
         </div>
     </div>
 </div>
@@ -168,12 +172,87 @@
         transition: all 0.3s ease;
         height: 100%;
         box-sizing: border-box;
+        position: relative;
+        overflow: hidden;
     }
 
     .landing-button:hover {
         transform: translateY(-4px);
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         border-color: var(--accent);
+    }
+
+    /* Dynamic button styles */
+    .dynamic-button .button-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 0;
+    }
+
+    .dynamic-button::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+        z-index: 1;
+    }
+
+    .dynamic-button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 2;
+    }
+
+    /* Section-specific gradient overlays */
+    .dynamic-button[data-section="gallery"]::before {
+        background: linear-gradient(135deg, rgba(74, 144, 226, 0.2) 0%, rgba(80, 200, 120, 0.2) 100%);
+    }
+
+    .dynamic-button[data-section="blog"]::before {
+        background: linear-gradient(135deg, rgba(255, 154, 0, 0.2) 0%, rgba(255, 206, 84, 0.2) 100%);
+    }
+
+    .dynamic-button[data-section="cv"]::before {
+        background: linear-gradient(135deg, rgba(138, 43, 226, 0.2) 0%, rgba(75, 0, 130, 0.2) 100%);
+    }
+
+    .dynamic-button:hover::before {
+        opacity: 1;
+    }
+
+    .dynamic-button:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .dynamic-button * {
+        position: relative;
+        z-index: 3;
+        color: white;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .dynamic-button h2 {
+        color: white !important;
+    }
+
+    .dynamic-button p {
+        color: rgba(255, 255, 255, 0.9) !important;
     }
 
     .landing-icon {
