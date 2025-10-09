@@ -3,27 +3,28 @@ title: "My long term review of using DIVEVOLK SeaTouch 4"
 date: 2025-10-07
 description: "Are smartphones the future of underwater photography?"
 resources:
-  - src: divevolk.jpeg
+  - src: divevolk_platinum.jpeg
     params:
       cover: true
 ---
 
-# The Setup
+# The Setup ⚙️
 The setup I've used consists of:
 * IPhone 14 Pro
 * DIVEVOLK SeaTouch 4 housing, upgraded later to a SeaTouch 4 MAX Platinum 
 * SeaLife Sea Dragon 2500 lumen video light
+* Red filter
 
 This was the second setup I used after I switched from a SeaLife SportDiver case to DIVEVOLK's touch enabled casings.
 The appeal of the system is that there are no electronics or third party apps that may fail during a dive trip.
 A also found the third party camera app developed by SeaLife to be a little behind the native camera app of the phone.
 For instance in the SeaLife app i experienced freezing and features like slow-motion recording were not possible at the time.
 
-![leaking housing](divevolk_platinum_membrane.jpeg)
+![leaking housing](divevolk_platinum.jpeg)
 
 ![torch](torch.jpg)
 
-# Impressions
+# Impressions 💭
 Using the SeaTouch 4 is extremely easy -- using an insert specific for your phone you simply slide it into the casing and tighten two thumbscrews to seal the casing and you are good to go.
 While the membrane does degrade the touch sensitivity significantly, task such as opening the camera app, switching lenses or opening the photo gallery are straight forward.
 

@@ -6,5 +6,3 @@ menus:
     name: Blog
     weight: 2
 ---
-
-🚧 Under construction 🚧

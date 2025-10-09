@@ -2,6 +2,10 @@
 title: "Review of SeaFrogs Salted Line housing for Sony A7IV"
 date: 2025-10-07    
 description: "My experiences of diving with the SeaFrogs Salted Line housing for the Sony A7IV + Sony 24-70mm f2.8 GM II"
+resources:
+  - src: camera_top.jpg
+    params:
+      cover: true
 ---
 
 # The Equipment

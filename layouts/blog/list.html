@@ -11,16 +11,39 @@
     {{ range .Pages }}
     <article class="blog-post-card">
         <a href="{{ .Permalink }}" class="post-link">
-            <div class="post-meta">
-                <time datetime="{{ .Date.Format " 2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+            <div class="post-content">
+                <div class="post-text">
+                    <div class="post-meta">
+                        <time datetime="{{ .Date.Format " 2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+                    </div>
+                    <h2 class="post-title">{{ .Title }}</h2>
+                    {{ if .Description }}
+                    <p class="post-description">{{ .Description }}</p>
+                    {{ else if .Summary }}
+                    <p class="post-description">{{ .Summary }}</p>
+                    {{ end }}
+                    <div class="read-more">Read more →</div>
+                </div>
+                {{ $coverImage := "" }}
+                {{ range .Resources.ByType "image" }}
+                {{ if .Params.cover }}
+                {{ $coverImage = . }}
+                {{ end }}
+                {{ end }}
+                {{ if $coverImage }}
+                <div class="post-thumbnail">
+                    <img src="{{ $coverImage.RelPermalink }}" alt="{{ $.Title }}" loading="lazy">
+                </div>
+                {{ else }}
+                {{ with .Resources.ByType "image" }}
+                {{ with index . 0 }}
+                <div class="post-thumbnail">
+                    <img src="{{ .RelPermalink }}" alt="{{ $.Title }}" loading="lazy">
+                </div>
+                {{ end }}
+                {{ end }}
+                {{ end }}
             </div>
-            <h2 class="post-title">{{ .Title }}</h2>
-            {{ if .Description }}
-            <p class="post-description">{{ .Description }}</p>
-            {{ else if .Summary }}
-            <p class="post-description">{{ .Summary }}</p>
-            {{ end }}
-            <div class="read-more">Read more →</div>
         </a>
     </article>
     {{ end }}
@@ -64,6 +87,39 @@
         color: inherit;
     }
 
+    .post-content {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .post-text {
+        flex: 1;
+        min-width: 0;
+        /* Prevents flex item from overflowing */
+    }
+
+    .post-thumbnail {
+        flex-shrink: 0;
+        width: 120px;
+        height: 120px;
+        border-radius: 6px;
+        overflow: hidden;
+        background: var(--bg-primary);
+        border: 1px solid var(--border);
+    }
+
+    .post-thumbnail img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .blog-post-card:hover .post-thumbnail img {
+        transform: scale(1.05);
+    }
+
     .post-meta {
         font-size: 0.9rem;
         color: var(--text-secondary);
@@ -87,6 +143,42 @@
         color: var(--accent);
         font-weight: 500;
         font-size: 0.9rem;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+        .post-content {
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .post-thumbnail {
+            width: 100%;
+            height: 180px;
+            align-self: stretch;
+        }
+
+        .blog-posts {
+            gap: 1rem;
+        }
+
+        .post-link {
+            padding: 1rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .post-thumbnail {
+            height: 160px;
+        }
+
+        .post-title {
+            font-size: 1.2rem;
+        }
+
+        .post-description {
+            font-size: 0.9rem;
+        }
     }
 </style>
 {{ end }}
