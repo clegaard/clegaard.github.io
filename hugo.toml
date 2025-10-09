@@ -39,8 +39,9 @@ page = ["HTML"]
 section = ["HTML"]
 
 [imaging]
-quality = 100
+quality = 85
 resampleFilter = "CatmullRom"
+anchor = "Smart"
 [imaging.exif]
 disableDate = false
 disableLatLong = true

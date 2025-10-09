@@ -92,14 +92,31 @@
     }
 
     /* Award image styling */
-    .cv-content img {
+    .cv-content img,
+    .cv-content .blog-image,
+    .cv-content .cv-image {
         width: 50%;
         height: auto;
         display: block;
         margin: 2rem auto;
         border-radius: 8px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
+    }
+
+    /* Lazy loading styles for all CV images */
+    .cv-content img:not(.lazyloaded),
+    .cv-content .blog-image:not(.lazyloaded),
+    .cv-content .cv-image:not(.lazyloaded) {
+        opacity: 0.3;
+        filter: blur(2px);
+    }
+
+    .cv-content img.lazyloaded,
+    .cv-content .blog-image.lazyloaded,
+    .cv-content .cv-image.lazyloaded {
+        opacity: 1;
+        filter: none;
     }
 
     .cv-content img:hover {
@@ -116,7 +133,8 @@
     }
 
     /* Headshot specific styling */
-    .cv-content img[src*="headshot"] {
+    .cv-content img[src*="headshot"],
+    .cv-content .blog-image[data-src*="headshot"] {
         width: 150px;
         height: 150px;
         object-fit: cover;
@@ -126,7 +144,8 @@
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     }
 
-    .cv-content img[src*="headshot"]:hover {
+    .cv-content img[src*="headshot"]:hover,
+    .cv-content .blog-image[data-src*="headshot"]:hover {
         transform: scale(1.05);
         box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
     }
@@ -149,19 +168,22 @@
     }
 
     /* AU Logo styling */
-    .cv-content img[src*="au_logo"] {
+    .cv-content img[src*="au_logo"],
+    .cv-content .cv-image[data-src*="au_logo"] {
         width: 60px;
         height: 60px;
         display: inline-block;
         margin: 0 10px 0 0;
         vertical-align: middle;
-        transition: transform 0.2s ease;
+        transition: transform 0.2s ease, opacity 0.3s ease, filter 0.3s ease;
         background: white;
-        padding: 4px;
         border-radius: 4px;
+        padding: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
-    .cv-content img[src*="au_logo"]:hover {
+    .cv-content img[src*="au_logo"]:hover,
+    .cv-content .cv-image[data-src*="au_logo"]:hover {
         transform: scale(1.1);
     }
 
@@ -176,19 +198,21 @@
     }
 
     /* PNNL Logo styling */
-    .cv-content img[src*="pnnl_logo"] {
+    .cv-content img[src*="pnnl_logo"],
+    .cv-content .cv-image[data-src*="pnnl_logo"] {
         width: 60px;
         height: 60px;
         display: inline-block;
         margin: 0 10px 0 0;
         vertical-align: middle;
-        transition: transform 0.2s ease;
+        transition: transform 0.2s ease, opacity 0.3s ease, filter 0.3s ease;
         background: white;
         padding: 4px;
         border-radius: 4px;
     }
 
-    .cv-content img[src*="pnnl_logo"]:hover {
+    .cv-content img[src*="pnnl_logo"]:hover,
+    .cv-content .cv-image[data-src*="pnnl_logo"]:hover {
         transform: scale(1.1);
     }
 
@@ -203,19 +227,21 @@
     }
 
     /* ECN Logo styling */
-    .cv-content img[src*="ecn_logo"] {
+    .cv-content img[src*="ecn_logo"],
+    .cv-content .cv-image[data-src*="ecn_logo"] {
         width: 60px;
         height: 60px;
         display: inline-block;
         margin: 0 10px 0 0;
         vertical-align: middle;
-        transition: transform 0.2s ease;
+        transition: transform 0.2s ease, opacity 0.3s ease, filter 0.3s ease;
         background: white;
         padding: 4px;
         border-radius: 4px;
     }
 
-    .cv-content img[src*="ecn_logo"]:hover {
+    .cv-content img[src*="ecn_logo"]:hover,
+    .cv-content .cv-image[data-src*="ecn_logo"]:hover {
         transform: scale(1.1);
     }
 
@@ -230,19 +256,21 @@
     }
 
     /* KU Leuven Logo styling */
-    .cv-content img[src*="ku_leuven_logo"] {
+    .cv-content img[src*="ku_leuven_logo"],
+    .cv-content .cv-image[data-src*="ku_leuven_logo"] {
         width: 60px;
         height: 60px;
         display: inline-block;
         margin: 0 10px 0 0;
         vertical-align: middle;
-        transition: transform 0.2s ease;
+        transition: transform 0.2s ease, opacity 0.3s ease, filter 0.3s ease;
         background: white;
         padding: 4px;
         border-radius: 4px;
     }
 
-    .cv-content img[src*="ku_leuven_logo"]:hover {
+    .cv-content img[src*="ku_leuven_logo"]:hover,
+    .cv-content .cv-image[data-src*="ku_leuven_logo"]:hover {
         transform: scale(1.1);
     }
 

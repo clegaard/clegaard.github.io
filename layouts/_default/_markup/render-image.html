@@ -4,18 +4,27 @@
 {{- $alt := .Text -}}
 {{- $title := .Title | default $alt -}}
 
-{{/* Create different sizes for responsive images */}}
-{{- $thumbnail := $image.Filter (slice images.AutoOrient (images.Process "fit 800x600 q85")) -}}
-{{- $medium := $image.Filter (slice images.AutoOrient (images.Process "fit 1200x900 q85")) -}}
-{{- $large := $image.Filter (slice images.AutoOrient (images.Process "fit 1600x1200 q85")) -}}
+{{/* Create only 2 sizes like gallery for better performance */}}
+{{- $thumbnail := $image.Filter (slice images.AutoOrient (images.Process "fit 600x600 q85")) -}}
+{{- $full := $image.Filter (slice images.AutoOrient (images.Process "fit 1600x1600 q85")) -}}
 
-{{/* Generate responsive image with srcset */}}
-<img src="{{ $thumbnail.RelPermalink }}"
-    srcset="{{ $thumbnail.RelPermalink }} 800w, {{ $medium.RelPermalink }} 1200w, {{ $large.RelPermalink }} 1600w"
-    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 800px, 1200px" alt="{{ $alt }}" title="{{ $title }}"
-    width="{{ $thumbnail.Width }}" height="{{ $thumbnail.Height }}" loading="lazy"
-    data-full-src="{{ $large.RelPermalink }}" />
+{{/* Extract dominant color for placeholder */}}
+{{- $color := index $thumbnail.Colors 0 | default "transparent" -}}
+
+{{/* Generate optimized image with lazy loading like gallery */}}
+<img class="lazyload blog-image" width="{{ $thumbnail.Width }}" height="{{ $thumbnail.Height }}"
+    data-src="{{ $thumbnail.RelPermalink }}"
+    data-srcset="{{ $thumbnail.RelPermalink }} 600w, {{ $full.RelPermalink }} 1600w"
+    data-sizes="(max-width: 768px) 100vw, 800px" alt="{{ $alt }}" title="{{ $title }}"
+    data-full-src="{{ $full.RelPermalink }}"
+    style="background-color: {{ $color }}; aspect-ratio: {{ $thumbnail.Width }} / {{ $thumbnail.Height }}" />
 {{- else -}}
-{{/* Fallback for external images or images not in page resources */}}
-<img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" title="{{ .Title | default .Text }}" loading="lazy" />
+{{/* Fallback for external images - add lazy loading for CV logos and static images */}}
+{{- if or (strings.Contains .Destination "logo") (strings.Contains .Destination "/images/") -}}
+<img class="lazyload cv-image" data-src="{{ .Destination | safeURL }}" alt="{{ .Text }}"
+    title="{{ .Title | default .Text }}" />
+{{- else -}}
+<img class="lazyload blog-image" data-src="{{ .Destination | safeURL }}" alt="{{ .Text }}"
+    title="{{ .Title | default .Text }}" />
+{{- end -}}
 {{- end -}}

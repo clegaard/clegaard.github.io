@@ -196,13 +196,26 @@
         text-align: left;
     }
 
-    .post-content img {
+    .post-content img,
+    .post-content .blog-image {
         margin: 2rem auto;
         display: block;
         max-width: 100%;
         height: auto;
         border-radius: 8px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: opacity 0.3s ease;
+    }
+
+    /* Lazy loading styles */
+    .post-content .blog-image:not(.lazyloaded) {
+        opacity: 0.3;
+        filter: blur(2px);
+    }
+
+    .post-content .blog-image.lazyloaded {
+        opacity: 1;
+        filter: none;
     }
 
     .post-content code {

@@ -4,10 +4,13 @@
         <div class="profile-image">
             {{ $headshot := .Resources.GetMatch "headshot.jpeg" }}
             {{ if $headshot }}
-            {{ $headshotResized := $headshot.Resize "300x300" }}
-            <img src="{{ $headshotResized.RelPermalink }}" alt="Christian Legaard" />
+            {{ $headshotResized := $headshot.Filter (slice images.AutoOrient (images.Process "fit 300x300 q85")) }}
+            {{ $color := index $headshotResized.Colors 0 | default "transparent" }}
+            <img class="lazyload" width="{{ $headshotResized.Width }}" height="{{ $headshotResized.Height }}"
+                data-src="{{ $headshotResized.RelPermalink }}" alt="Christian Legaard"
+                style="background-color: {{ $color }}" />
             {{ else }}
-            <img src="/headshot.jpeg" alt="Christian Legaard" />
+            <img class="lazyload" data-src="/headshot.jpeg" alt="Christian Legaard" />
             {{ end }}
         </div>
     </div>
@@ -87,7 +90,18 @@
         height: 100%;
         object-fit: cover;
         border-radius: 50%;
-        transition: all 0.3s ease;
+        transition: all 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
+    }
+
+    /* Lazy loading styles for profile image */
+    .profile-image img:not(.lazyloaded) {
+        opacity: 0.3;
+        filter: blur(2px);
+    }
+
+    .profile-image img.lazyloaded {
+        opacity: 1;
+        filter: none;
     }
 
     .profile-image:hover img {
