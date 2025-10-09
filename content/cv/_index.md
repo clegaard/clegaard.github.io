@@ -17,8 +17,7 @@ resources:
 # Christian Møldrup Legaard, PhD
 
 ![Christian Legaard Headshot](/headshot.jpeg "Christian Møldrup Legaard")
-
-**Scientific Machine Learning Researcher | Wildlife Photographer**
+**Scientific Machine Learning | Software Design | Scuba Diver | Wildlife Photographer**
 
 ## Contact Information
 - 💻 **Website**: www.christianlegaard.com
@@ -31,9 +30,9 @@ resources:
 
 ## Professional Summary
 
-PhD graduate from Aarhus University with expertise in Deep Learning, Numerical Simulation, Machine Learning, and. Combines advanced research capabilities with artistic passion for nature and wildlife photography.
+PhD graduate from Aarhus University with expertise in Deep Learning, Numerical Simulation, Machine Learning, and combines advanced research capabilities with an artistic passion for nature and wildlife photography.
 
-For an up to date overview of my research and how you can access it see my Google Scholar profile or take a look at my PhD thesis which can be found [here](phd_thesis.pdf).
+For an up-to-date overview of my research and how you can access it, see my Google Scholar profile or take a look at my PhD thesis, which can be found [here](phd_thesis.pdf).
 
 ## Education
 
@@ -44,20 +43,20 @@ Specifically, my research surveyed how state-of-the-art models neural ordinary d
 
 
 ### ![image](/images/pnnl_logo.svg) **(2022) Visiting Researcher** -- Pacific Northwest National Laboratory
-Research in constrained optimziation using neural networks and contributions to the open-source Python library NeuroMancher maintained by PNNL.
+Research in constrained optimization using neural networks and contributions to the open-source Python library NeuroMancher maintained by PNNL.
 
 
 ### ![image](/images/ecn_logo.svg) **(2021) Visiting Researcher** -- École Centrale de Nantes
-Research visit to collaborate with partneres and deepen my understanding of finite element analysis, reduced order modeling and fluid dynamics.
+Research visit to collaborate with partners and deepen my understanding of finite element analysis, reduced-order modeling, and fluid dynamics.
 
 ### ![image](/images/ku_leuven_logo.svg) **(2019-2021) Erasmus Exchange**, KU Leuven
-Erasmus exchange at KU Leuven for one semester enrolled in courses on Model Predictive Control, Industrial Automation and Control, System Identification and Advanced Robotics.
+Erasmus exchange at KU Leuven for one semester enrolled in courses on Model Predictive Control, Industrial Automation and Control, System Identification, and Advanced Robotics.
 
 ### ![image](/images/au_logo.svg) **(2018-2020) Master of Science**, Computer Engineering - Aarhus University
-Courses focusing on data science such as optimization, scientific computing, computer vision and deep learning.
+Courses focusing on data science such as optimization, scientific computing, computer vision, and deep learning.
 
 ### ![image](/images/au_logo.svg) **(2014-2018) Bachelor of Engineering**, Electronic Engineering -- Aarhus University
-Introduction to the fundamental concepts involved in designing electronic products such analog electronic design, embedded software, signal processing, applied mathematics and many more.
+Introduction to the fundamental concepts involved in designing electronic products such as analog electronic design, embedded software, signal processing, applied mathematics, and many more.
 
 ## Technical Experience
 
@@ -78,8 +77,6 @@ Introduction to the fundamental concepts involved in designing electronic produc
 * Premiere Pro
 * Photoshop
 * Lightroom
-
-
 
 
 ## Languages

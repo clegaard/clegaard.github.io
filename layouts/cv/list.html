@@ -131,6 +131,15 @@
         box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
     }
 
+    /* Center text underneath headshot */
+    .cv-content img[src*="headshot"]+p {
+        text-align: center;
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        margin: 0 auto 2rem auto;
+        max-width: 600px;
+    }
+
     /* Mobile headshot adjustments */
     @media (max-width: 768px) {
         .cv-content img[src*="headshot"] {
