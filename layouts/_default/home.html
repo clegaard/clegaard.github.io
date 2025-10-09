@@ -47,7 +47,9 @@
                     <h2>{{ .Title }}</h2>
                     <p>{{ .Description | default .Summary | truncate 120 }}</p>
                     {{ if $cover }}
-                    <div class="button-background" style="background-image: url('{{ $cover.RelPermalink }}');"></div>
+                    {{ $coverProcessed := $cover.Filter (slice images.AutoOrient (images.Process "fit 800x600 q85")) }}
+                    <div class="button-background" style="background-image: url('{{ $coverProcessed.RelPermalink }}');">
+                    </div>
                     {{ end }}
                 </a>
             </div>
