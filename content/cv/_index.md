@@ -52,7 +52,7 @@ Research in constrained optimization using neural networks and contributions to 
 ### ![image](/images/ecn_logo.svg) **(2021) Visiting Researcher** -- École Centrale de Nantes
 Research visit to collaborate with partners and deepen my understanding of finite element analysis, reduced-order modeling, and fluid dynamics.
 
-### ![image](/images/ku_leuven_logo.svg) **(2019-2021) Erasmus Exchange**, KU Leuven
+### ![image](/images/ku_leuven_logo.svg) **(2019) Erasmus Exchange**, KU Leuven
 Erasmus exchange at KU Leuven for one semester enrolled in courses on Model Predictive Control, Industrial Automation and Control, System Identification, and Advanced Robotics.
 
 ### ![image](/images/au_logo.svg) **(2018-2020) Master of Science**, Computer Engineering - Aarhus University
